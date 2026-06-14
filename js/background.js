@@ -27,7 +27,7 @@ export class Background {
         this.height = 500;
         this.layer1image = document.getElementById('layer1');
         this.layer2image = document.getElementById('layer2');
-        this.layer3image = document.getElementById('layer3');
+        this.layer3image = document.getElementById('layer_corujas');
         this.layer4image = document.getElementById('layer4');
         this.layer5image = document.getElementById('layer5');
         this.layer1 = new Layer(this.game, this.width, this.height, 0, this.layer1image); // Podem ser alterados para customizar o Parallax

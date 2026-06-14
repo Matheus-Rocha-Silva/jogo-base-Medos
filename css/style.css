@@ -17,6 +17,6 @@
     font-style: normal;
 }
 
-#player, #layer1, #layer2, #layer3, #layer4, #layer5, #enemy_fly, #enemy_raven, #enemy_ghost, #enemy_plant, #enemy_spider_big, #fire, #collisionAnimation, #lives {
+#player, #layer1, #layer2, #layer3, #layer_corujas, #layer4, #layer5, #enemy_fly, #enemy_raven, #enemy_ghost, #enemy_plant, #enemy_spider_big, #fire, #collisionAnimation, #lives {
     display: none;
 }
