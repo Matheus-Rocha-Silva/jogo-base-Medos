@@ -1,8 +1,8 @@
 import { Player } from './player.js';
-import { InputHandler } from './input.js';
+import { InputHandler } from './input_teste.js';
 import { Background } from './background.js';
-import { FlyingEnemy, ClimbingEnemy, GroundEnemy } from './enemies.js';
-import { UI } from './UI.js';
+import { FlyingEnemy, ClimbingEnemy, GroundEnemy, FlyingEnemyGhost } from './enemies.js';
+import { UI } from './UI_teste.js';
 
 window.addEventListener('load', function(){
     const canvas = document.getElementById('canvas');
@@ -21,10 +21,8 @@ window.addEventListener('load', function(){
             this.player = new Player(this);
             this.input = new InputHandler(this);
             this.UI = new UI(this);
-            
             // Gerenciamento de Estado do Jogo
             this.gameState = 'MENU'; // Estados possíveis: 'MENU', 'JOGANDO'
-
             this.enemies = [];
             this.particles = [];
             this.collisions = []; 
@@ -127,6 +125,8 @@ window.addEventListener('load', function(){
             else if (this.speed > 0) this.enemies.push(new ClimbingEnemy(this));
 
             this.enemies.push(new FlyingEnemy(this));
+            //this.enemies.push(new FlyingEnemyRaven(this));
+            this.enemies.push(new FlyingEnemyGhost(this));
         }
     }
 

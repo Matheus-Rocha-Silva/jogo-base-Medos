@@ -55,6 +55,56 @@ export class FlyingEnemy extends Enemy {
     }
 }
 
+export class FlyingEnemyGhost extends Enemy {
+    constructor(game){
+        super();
+        this.game = game;
+        this.width = 60;
+        this.height = 70;
+        this.x = this.game.width + Math.random() * this.game.width * 0.5;
+        this.y = Math.random() * this.game.height * 0.8;
+        this.speedX = Math.random() + 1;
+        this.speedY = 0;
+        this.maxFrame = 5;
+        this.image = document.getElementById('enemy_ghost');
+        // Movimentação do imigo voador
+        this.angle = 0;
+        this.va = Math.random() * 0.1 + 0.1;
+    }
+
+    // Método que irá atualizar o comportamento de voo do inimigo
+    update(deltaTime){
+        super.update(deltaTime);
+        this.angle += this.va;
+        this.y += Math.sin(this.angle);
+    }
+}
+
+/*export class FlyingEnemyRaven extends Enemy {
+    constructor(game){
+        super();
+        this.game = game;
+        this.width = 271;
+        this.height = 194;
+        this.x = this.game.width + Math.random() * this.game.width * 0.5;
+        this.y = Math.random() * this.game.height * 0.5;
+        this.speedX = Math.random() + 1;
+        this.speedY = 0;
+        this.maxFrame = 5;
+        this.image = document.getElementById('enemy_raven');
+        // Movimentação do imigo voador
+        this.angle = 0;
+        this.va = Math.random() * 0.1 + 0.1;
+    }
+
+    // Método que irá atualizar o comportamento de voo do inimigo
+    update(deltaTime){
+        super.update(deltaTime);
+        this.angle += this.va;
+        this.y += Math.sin(this.angle);
+    }
+}*/
+
 export class GroundEnemy extends Enemy {
     constructor(game){
         super();
