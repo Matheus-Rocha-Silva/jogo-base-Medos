@@ -22,15 +22,17 @@ export class UI {
 
         // 1. TÍTULO DO JOGO
         context.font = '60px ' + this.fontFamily;
-        context.fillText('CRIATURAS DA NOITE', this.game.width * 0.5, 90);
+        context.fillText('Medos – CRIATURAS DA NOITE', this.game.width * 0.5, 90);
 
         // 2. SINOPSE
         context.fillStyle = 'white';
         context.font = '18px Arial'; // Fonte limpa para leitura da sinopse
         const sinopseG1 = "Sob a névoa do luar, criaturas profanas despertaram para reivindicar a noite.";
         const sinopseG2 = "Corra, sobreviva e enfrente os monstros antes que seu tempo acabe.";
+        const regra = "Ganhe 40 pts antes dos 30 segundos para ganhar!";
         context.fillText(sinopseG1, this.game.width * 0.5, 150);
         context.fillText(sinopseG2, this.game.width * 0.5, 175);
+        context.fillText(regra, this.game.width * 0.5, 195);
 
         // 3. TUTORIAL DE CONTROLES
         // Caixa de Controles
@@ -39,22 +41,23 @@ export class UI {
         
         context.fillStyle = '#ffcc00';
         context.font = '22px ' + this.fontFamily;
-        context.fillText('TUTORIAL DE CONTROLES COM COLO', this.game.width * 0.5, 240);
+        context.fillText('TUTORIAL DE CONTROLES', this.game.width * 0.5, 240);
 
         context.fillStyle = 'white';
         context.font = '16px Arial';
-        context.fillText('Movimentação: Setas Direcionais  OU  Teclas [ W, A, S, D ]', this.game.width * 0.5, 280);
-        context.fillText('Ações / Pular: Tecla [ ENTER ]  OU  [ BARRA DE ESPAÇO ]', this.game.width * 0.5, 310);
+        context.fillText('Movimentação: Setas Direcionais  OU  Teclas [ W, A, S, D ]', this.game.width * 0.5, 260);
+        context.fillText('Ações / Pular: Tecla [ ENTER ]  OU  [ BARRA DE ESPAÇO ]', this.game.width * 0.5, 290);
         context.font = '12px Arial';
-        context.fillStyle = '#aaaaaa';
-        context.fillText('Modo desenvolvedor: Pressione [ G ] para ativar o Debug', this.game.width * 0.5, 335);
+        context.fillStyle = '#eeff00';
+        context.fillText('Modo desenvolvedor: Pressione [ G ] para ativar o Debug', this.game.width * 0.5, 345);
+        context.fillText('Reiniciar o jogo: Pressione [ F5 ] para reiniciar', this.game.width * 0.5, 325);
 
         // 4. BOTÃO PARA INICIAR
         context.fillStyle = '#4CAF50'; // Verde chamativo
         context.fillRect(this.game.width * 0.35, 385, this.game.width * 0.3, 50);
 
         context.fillStyle = 'white';
-        context.font = '24px ' + this.fontFamily;
+        context.font = '17px ' + this.fontFamily;
         context.shadowColor = 'black';
         context.fillText('Pressione ESPAÇO ou ENTER para Iniciar', this.game.width * 0.5, 418);
 
